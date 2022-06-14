@@ -1,0 +1,37 @@
+﻿<Window x:Class="usersApp.Windows.OrderWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:usersApp.Windows"
+        mc:Ignorable="d"
+        Icon="/Images/cinema2.png"
+        Title="Кінотеатр. Оформлення замовлення" Height="390" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize" Width="860">
+
+    <Grid Background="#ffdadada">
+        <Border Height="320" Width="810" Margin="15" Background="White" VerticalAlignment="Center" Padding="15" CornerRadius="30">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="30" Color="LightGray" ShadowDepth="0"/>
+            </Border.Effect>
+            <StackPanel>
+                <StackPanel HorizontalAlignment="Center" Margin="0 0 0 0">
+                    <TextBlock HorizontalAlignment="Center" FontFamily="Segoe UI" FontSize="40" FontWeight="Bold">Оберіть спосіб оплати:</TextBlock>
+                    <StackPanel HorizontalAlignment="Center" Margin="0 20 0 0" VerticalAlignment="Center" Orientation="Horizontal">
+                        <RadioButton Cursor="Hand" x:Name="radioButtonCardPay" Width="209.46" FontFamily="Segoe UI" FontSize="24" FontWeight="SemiBold" Margin="0 0 0 0" VerticalContentAlignment="Center" VerticalAlignment="Center" Checked="radioButtonCardPay_Checked">Оплата карткою</RadioButton>
+                        <Image Margin="-7 0 0 0" VerticalAlignment="Center" Width="60" Source="/Images/mastercard.png"></Image>
+                        <Image Margin="-12 0 30 0" VerticalAlignment="Center" Width="60" Source="/Images/visa.png"></Image>
+                        <RadioButton Cursor="Hand" x:Name="radioButtonCashPay" Margin="0 0 20 0" FontFamily="Segoe UI" FontSize="24" FontWeight="SemiBold" VerticalContentAlignment="Center" VerticalAlignment="Center" Checked="radioButtonCashPay_Checked">Оплата готівкою</RadioButton>
+                        <Image Margin="-20 0 0 0" VerticalAlignment="Center" Width="45" Source="/Images/cash.png"></Image>
+                    </StackPanel>
+                    <StackPanel  HorizontalAlignment="Center" Margin="0 10 0 0" >
+                        <CheckBox IsEnabled="False" Cursor="Hand" x:Name="checkBoxAcceptRules" FontFamily="Segoe UI" FontSize="20" HorizontalContentAlignment="Center" HorizontalAlignment="Center" FontWeight="Regular" VerticalContentAlignment="Center" VerticalAlignment="Center"  Click="checkBoxAcceptRules_Click" >Я погоджуюсь з правилами кінотеатру та на обробку персональних даних</CheckBox>
+                    </StackPanel>
+                    <StackPanel>
+                        <Button x:Name="buttonCompleteOrder" IsEnabled="False" Margin="0 25 0 0"  VerticalAlignment="Center" FontFamily="Segoe UI" FontWeight="Bold" FontSize="22" Height="50" Click="buttonCompleteOrder_Click">Завершити замовлення</Button>
+                    </StackPanel>
+                </StackPanel>
+                
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>

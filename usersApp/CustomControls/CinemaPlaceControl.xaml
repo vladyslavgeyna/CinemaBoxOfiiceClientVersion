@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="usersApp.CustomControls.CinemaPlaceControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:usersApp.CustomControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="57" d:DesignWidth="37">
+    <UserControl.Triggers>
+    <EventTrigger RoutedEvent="MouseEnter">
+        <BeginStoryboard>
+            <Storyboard>
+                    <ColorAnimation Storyboard.TargetName="cinemaPlace" Duration="0:0:0.2"
+                                            Storyboard.TargetProperty="Background.Color"
+                                            To="#9575cd">
+                </ColorAnimation>
+            </Storyboard>
+        </BeginStoryboard>
+    </EventTrigger>
+    <EventTrigger RoutedEvent="MouseLeave">
+        <BeginStoryboard>
+            <Storyboard>
+                    <ColorAnimation Storyboard.TargetName="cinemaPlace" Duration="0:0:0.2"
+                                            Storyboard.TargetProperty="Background.Color" To="#FF673AB7">
+                </ColorAnimation>
+            </Storyboard>
+        </BeginStoryboard>
+    </EventTrigger>
+    </UserControl.Triggers>
+    <Grid>
+        <Border VerticalAlignment="Center" HorizontalAlignment="Center" CornerRadius="5" x:Name="cinemaPlace" Width="35" Height="55" Background="#FF673AB7" BorderBrush="Black" BorderThickness="3" Cursor="Help" />
+    </Grid>
+</UserControl>

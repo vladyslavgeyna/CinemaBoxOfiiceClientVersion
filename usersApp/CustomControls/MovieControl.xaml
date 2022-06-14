@@ -1,0 +1,18 @@
+﻿<UserControl x:Class="usersApp.CustomControls.MovieControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:usersApp.CustomControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="405" d:DesignWidth="395.333333333">
+    <Grid>
+        <StackPanel>
+            <Border  BorderThickness="3" BorderBrush="#FF673AB7" Width="230" Height="328.571428571"  >
+                <Image x:Name="ImageMovie" HorizontalAlignment="Center" VerticalAlignment="Center" Source="/Images/freeguy.jpeg" Width="230" Height="328.571428571"  />
+            </Border>
+            <TextBlock Margin="0 3 0 0" x:Name="TextBlockMovieName" HorizontalAlignment="Center" Text="Персонаж" FontSize="22" FontFamily="Segoe UI Bold"/>
+            <Button Height="35" x:Name="ButtonMovieDetails" BorderThickness="2" BorderBrush="Black" FontFamily="Segoe UI Bold" Content="Детальніше" Width="230" Margin="0 5 0 0" FontSize="18" Click="ButtonMovieDetails_Click" Cursor="Hand"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

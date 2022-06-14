@@ -1,0 +1,66 @@
+﻿<Window x:Class="usersApp.Windows.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:usersApp"
+        xmlns:controls="clr-namespace:usersApp.CustomControls"
+        mc:Ignorable="d"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        Icon="/Images/cinema2.png"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="Кінотеатр. Реєстрація"  ResizeMode="CanMinimize" Height="570" Width="850" WindowStartupLocation="CenterScreen">
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="Loaded">
+            <EventTrigger.Actions>
+                <BeginStoryboard>
+                    <Storyboard TargetProperty="Width" TargetName="regButton">
+                        <DoubleAnimation From="0" To="690" Duration="0:0:1.5"/>
+                    </Storyboard>
+                </BeginStoryboard>
+                <BeginStoryboard>
+                    <Storyboard TargetProperty="Width" TargetName="reg2Button">
+                        <DoubleAnimation From="0" To="150" Duration="0:0:1.5"/>
+                    </Storyboard>
+                </BeginStoryboard>
+                <BeginStoryboard>
+                    <Storyboard TargetProperty="Width" TargetName="authButton">
+                        <DoubleAnimation From="0" To="150" Duration="0:0:1.5"/>
+                    </Storyboard>
+                </BeginStoryboard>
+                <BeginStoryboard>
+                    <Storyboard TargetProperty="Opacity" TargetName="imgCinema">
+                        <DoubleAnimation  From="0" To="1" Duration="0:0:1.5"/>
+                    </Storyboard>
+                </BeginStoryboard>
+            </EventTrigger.Actions>
+        </EventTrigger>
+    </Window.Triggers>
+    <Grid Background="#ffdadada">
+        <Border MinWidth="400" Margin="15" Background="White"  VerticalAlignment="Center" Padding="30" MaxWidth="750" CornerRadius="20">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="30" Color="LightGray" ShadowDepth="0"/>
+            </Border.Effect>
+            <StackPanel>
+                <TextBlock Text="Вітаємо!" FontSize="30" FontWeight="Bold" Margin="0 0 0 20"/>
+                <Grid Margin="0 0 0 20">
+                    <Button  FontSize="18" x:Name="reg2Button" HorizontalAlignment="Left" Content="Реєстрація" Width="150" Height="39" Cursor="Hand"/>
+                    <Button FontSize="18" BorderThickness="1" BorderBrush="#FF673AB7" x:Name="authButton"  Height="37" Click="Button_Window_Auth_Click" HorizontalAlignment="Right" Content="Ввійти" Style="{StaticResource MaterialDesignFlatButton}" Width="150" Cursor="Hand"/>
+                </Grid>
+                <controls:AuthRegTextBoxControl x:Name="textBoxName" HintText="Введіть ім'я"></controls:AuthRegTextBoxControl>
+                <controls:AuthRegTextBoxControl x:Name="textBoxLogin" HintText="Введіть логін у форматі email"></controls:AuthRegTextBoxControl>
+                <PasswordBox FontSize="15" x:Name="textBoxPassword" materialDesign:HintAssist.Hint="Введіть пароль" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" Cursor="Arrow"/>
+                <PasswordBox FontSize="15" x:Name="textBoxPasswordConfirm" materialDesign:HintAssist.Hint="Повторіть пароль" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" Cursor="Arrow"/>
+                <controls:AuthRegTextBoxControl PreviewTextInput="textBoxAge_PreviewTextInput" x:Name="textBoxAge" HintText="Введіть ваш вік"></controls:AuthRegTextBoxControl>
+                <Button Height="39" FontSize="18" x:Name="regButton" Content="Зареєструватись" Margin="0 20" Click="Button_Reg_Click" Width="690" Cursor="Hand"/>
+            </StackPanel>
+        </Border>
+        <StackPanel VerticalAlignment="Top" HorizontalAlignment="Center">
+            <Image Opacity="1" x:Name="imgCinema" Source="/Images/cinema2.png" Width="175" Margin="0 15 0 0">
+                <Image.Effect>
+                    <DropShadowEffect Direction="0" Color="Black" BlurRadius="10" ShadowDepth="0" Opacity="1"/>
+                </Image.Effect>
+            </Image>
+        </StackPanel>
+    </Grid>
+</Window>

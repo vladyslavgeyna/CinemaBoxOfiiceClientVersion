@@ -1,0 +1,102 @@
+﻿<Page x:Class="usersApp.Pages.FavouritePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:usersApp"
+      mc:Ignorable="d" 
+      x:Name="FavPage"
+      d:DesignHeight="660" d:DesignWidth="1244"
+      Title="FavouritePage">
+    <Grid Background="#ffdadada">
+        <ScrollViewer>
+            <StackPanel>
+                <StackPanel  Orientation="Horizontal" Background="#FF673AB7" HorizontalAlignment="Left">
+                    <Image Source="/Images/favorite.png" Height="80" Width="80" Margin="10 0 10 0">
+                        <Image.Effect>
+                            <DropShadowEffect Direction="0" Color="White" BlurRadius="10" ShadowDepth="0" Opacity="0.7"/>
+                        </Image.Effect>
+                    </Image>
+                    <Label Width="1125" Content="Обране" FontSize="50" Padding="10 0 0 0" Foreground="White" FontFamily="Segoe UI Black">
+                        <Label.Effect>
+                            <DropShadowEffect Direction="0" Color="White" ShadowDepth="0" Opacity="0.5" BlurRadius="10"/>
+                        </Label.Effect>
+                    </Label>
+                </StackPanel>
+                <Border Margin="15" Background="White" Width="1186" CornerRadius="50" MinHeight="550">
+                    <Border.Effect>
+                        <DropShadowEffect BlurRadius="30" Color="LightGray" ShadowDepth="0"/>
+                    </Border.Effect>
+                    <StackPanel>
+                        <StackPanel>
+                            <Image HorizontalAlignment="Right" Source="/Images/cinema2.png" Width="175" Margin="0 -27 30 0">
+                                <Image.Effect>
+                                    <DropShadowEffect Direction="0" Color="Black" BlurRadius="10" ShadowDepth="0" Opacity="1"/>
+                                </Image.Effect>
+                            </Image>
+                        </StackPanel>
+                        <StackPanel x:Name="stackPanelProductsInfo" MinHeight="460" Margin="10 0 0 0">
+                            <StackPanel Margin="0 -30 0 0" Height="60" Orientation="Horizontal">
+                                <TextBlock Width="657.373333333333" VerticalAlignment="Center" HorizontalAlignment="Left" x:Name="textBlockTitle" Margin="20 0 30 0" FontFamily="Segoe UI" FontWeight="Black" FontSize="40">В Вашому обраному поки пусто</TextBlock>
+                                <Button Margin="0 7 0 0" VerticalAlignment="Center" IsEnabled="False" x:Name="buttonRemoveFavorite" Click="buttonRemoveFavorite_Click"  FontFamily="Segoe UI" FontWeight="Bold" Background="White"  BorderBrush="Black" BorderThickness="3" Height="45" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"  Cursor="Hand" >
+                                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal">
+                                        <Image Margin="0 0 10 0" VerticalAlignment="Center" Source="/Images/trash.png" Width="25" />
+                                        <TextBlock Foreground="Black" FontSize="22" VerticalAlignment="Center" Text="Очистити обране" Height="32" FontFamily="Segoe UI"/>
+                                    </StackPanel>
+                                </Button>
+                            </StackPanel>
+                            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Left" Visibility="Collapsed" x:Name="textBlockTitleProducts"  Margin="20 0 0 0" FontFamily="Segoe UI" FontWeight="Bold" FontSize="30"> Товари (назва - ціна - кількість):</TextBlock>
+                            <ListView HorizontalAlignment="Left" Margin="15 10 0 0" x:Name="listViewListOfProducts" >
+                                <ListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <WrapPanel>
+                                            <TextBlock Foreground="Black" Margin="0 -10 15 0" FontFamily="Segoe UI" FontWeight="Bold" FontSize="20" Width="301.913333333333" Text="{Binding Name}"></TextBlock>
+                                            <StackPanel Width="67.3533333333333" Margin="0 -10 15 0" Orientation="Horizontal">
+                                                <TextBlock Foreground="Black"  FontFamily="Segoe UI" FontWeight="Bold" FontSize="20" Text="{Binding Price}"></TextBlock>
+                                                <TextBlock Foreground="Black" FontFamily="Segoe UI" FontWeight="Bold" FontSize="20"  Text="грн"></TextBlock>
+                                            </StackPanel>
+                                            <TextBlock Margin="0 -10 0 0" Foreground="Black" FontFamily="Segoe UI" FontWeight="Bold" FontSize="20" Text="{Binding Amount}"></TextBlock>
+                                            <TextBlock Foreground="Black" FontFamily="Segoe UI" FontWeight="Bold" FontSize="20" Margin="0 -10 0 0" Text="шт"></TextBlock>
+                                        </WrapPanel>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
+                            <StackPanel  Height="50" Orientation="Horizontal">
+                                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Left" Visibility="Collapsed" x:Name="textBlockTitleMovies" Margin="20 0 0 0" FontFamily="Segoe UI" FontWeight="Bold" FontSize="30">Фільм (назва - ціна - дата та час сеансу):</TextBlock>
+                            </StackPanel>
+                            <ListView HorizontalAlignment="Left" Margin="15 10 0 0" x:Name="listViewListOfMovies">
+                                <ListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <WrapPanel>
+                                            <TextBlock Width="357.576666666667" Foreground="Black" Margin="0 -10 10 0" FontFamily="Segoe UI" FontWeight="Bold" FontSize="20" Text="{Binding Name}"></TextBlock>
+                                            <StackPanel Width="67.3533333333333" Margin="0 -10 15 0" Orientation="Horizontal">
+                                                <TextBlock Foreground="Black"  FontFamily="Segoe UI" FontWeight="Bold" FontSize="20" Text="{Binding Price}"></TextBlock>
+                                                <TextBlock Foreground="Black" FontFamily="Segoe UI" FontWeight="Bold" FontSize="20"  Text="грн"></TextBlock>
+                                            </StackPanel>
+                                            <StackPanel Orientation="Horizontal" Width="102.866666666667" Margin="0 -10 15 0">
+                                                <TextBlock Foreground="Black" FontFamily="Segoe UI" FontWeight="Bold" FontSize="20" Text="{Binding DayOfSession}"></TextBlock>
+                                                <TextBlock Foreground="Black" FontFamily="Segoe UI" FontWeight="Bold" FontSize="20" Text="."></TextBlock>
+                                                <TextBlock Foreground="Black" FontFamily="Segoe UI" FontWeight="Bold" FontSize="20" Text="{Binding MonthOfSession}"></TextBlock>
+                                                <TextBlock Foreground="Black" FontFamily="Segoe UI" FontWeight="Bold" FontSize="20" Text="."></TextBlock>
+                                                <TextBlock Foreground="Black" FontFamily="Segoe UI" FontWeight="Bold" FontSize="20" Text="{Binding YearOfSession}"></TextBlock>
+                                            </StackPanel>
+                                            <TextBlock Margin="0 -10 0 0" Foreground="Black" FontFamily="Segoe UI" FontWeight="Bold" FontSize="20" Text="{Binding TimeOfSession}"></TextBlock>
+                                        </WrapPanel>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="10 5 0 10">
+                            <StackPanel Width="657.373333333333" Margin="20 0 30 0" VerticalAlignment="Center" Orientation="Horizontal">
+                                <TextBlock Visibility="Hidden" Margin="0 0 15 0" VerticalAlignment="Center"  x:Name="textBlockTotalPriceTitle"  FontFamily="Segoe UI" FontWeight="Bold" FontSize="26">Загальна сума:</TextBlock>
+                                <TextBlock Visibility="Hidden" VerticalAlignment="Center" x:Name="textBlockTotalPrice"  FontFamily="Segoe UI" FontWeight="Bold" FontSize="26"></TextBlock>
+                                <TextBlock Visibility="Hidden" VerticalAlignment="Center" x:Name="textBlockTotalPriceUAH"  FontFamily="Segoe UI" FontWeight="Bold" FontSize="26">грн</TextBlock>
+                            </StackPanel>
+                            <Button Visibility="Hidden" x:Name="buttonMakeOrder" VerticalAlignment="Center" FontFamily="Segoe UI" FontWeight="Bold" FontSize="22" Height="45" Click="buttonMakeOrder_Click">Сформувати замовлення</Button>
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>

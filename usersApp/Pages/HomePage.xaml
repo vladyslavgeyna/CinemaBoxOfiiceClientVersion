@@ -1,0 +1,119 @@
+﻿<Page x:Class="usersApp.Pages.HomePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:usersApp"
+      xmlns:controls="clr-namespace:usersApp.CustomControls"
+      mc:Ignorable="d" d:DesignWidth="1244"
+      Title="UserPage" Height="660">
+    <Grid Background="#ffdadada">
+        <ScrollViewer >
+            <StackPanel>
+                <StackPanel Orientation="Horizontal" Background="#FF673AB7" HorizontalAlignment="Left">
+                    <Image Source="/Images/home.png" Height="80" Width="80" Margin="10 0 10 0">
+                        <Image.Effect>
+                            <DropShadowEffect Direction="0" Color="White" BlurRadius="10" ShadowDepth="0" Opacity="0.7"/>
+                        </Image.Effect>
+                    </Image>
+                    <Label Width="1125" Content="Домашня сторінка" FontSize="50" Padding="10 0 0 0" Foreground="White" FontFamily="Segoe UI Black">
+                        <Label.Effect>
+                            <DropShadowEffect Direction="0" Color="White" ShadowDepth="0" Opacity="0.5" BlurRadius="10"/>
+                        </Label.Effect>
+                    </Label>
+                </StackPanel>
+                <Border Margin="15" Background="White" Width="1186" CornerRadius="50" Height="1120">
+                    <Border.Effect>
+                        <DropShadowEffect BlurRadius="30" Color="LightGray" ShadowDepth="0"/>
+                    </Border.Effect>
+                    <StackPanel>
+                        <StackPanel>
+                            <Image HorizontalAlignment="Right" Source="/Images/cinema2.png" Width="175" Margin="0 -27 30 0">
+                                <Image.Effect>
+                                    <DropShadowEffect Direction="0" Color="Black" BlurRadius="10" ShadowDepth="0" Opacity="1"/>
+                                </Image.Effect>
+                            </Image>
+                        </StackPanel>
+                        <StackPanel Margin="35 -5 0 0" Orientation="Horizontal">
+                            <TextBlock Foreground="Black" VerticalAlignment="Center" FontWeight="Black" FontSize="60" FontFamily="Segoe UI">Вітаємо,</TextBlock>
+                            <TextBlock Foreground="Black" Margin="15 0 0 0" VerticalAlignment="Center" FontWeight="Black" FontSize="60" FontFamily="Segoe UI" x:Name="textBlockNameOfUser">Name</TextBlock>
+                            <TextBlock Foreground="Black" VerticalAlignment="Center" FontWeight="Black" FontSize="60" FontFamily="Segoe UI">!</TextBlock>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="35 50 0 0">
+                            <StackPanel Margin="0 0 50 0" VerticalAlignment="Center">
+                                <Label VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="#FF673AB7" Content="Н О В И Н К И" FontSize="45" FontWeight="Black" FontFamily="Segoe UI">
+                                    <Label.Effect>
+                                        <DropShadowEffect Direction="0" Color="#FF673AB7" ShadowDepth="3"  Opacity="0.75" BlurRadius="10"/>
+                                    </Label.Effect>
+                                </Label>
+                                <Label Margin="0 0 50 0" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="#FF673AB7" Content="Ф І Л Ь М І В" FontSize="45" FontWeight="Black" FontFamily="Segoe UI">
+                                    <Label.Effect>
+                                        <DropShadowEffect Direction="0" Color="#FF673AB7" ShadowDepth="3" Opacity="0.75" BlurRadius="10"/>
+                                    </Label.Effect>
+                                </Label>
+                            </StackPanel>
+                            <Border Margin="0 0 50 0" BorderThickness="3" BorderBrush="#FF673AB7" Width="200" Height="285.714285714"  >
+                                <Image  HorizontalAlignment="Center" VerticalAlignment="Center" Source="/Images/freeguy.jpeg" Width="200" Height="285.714285714"  />
+                            </Border>
+                            <Image Width="90" Height="90" Margin="-490 0 0 195" Source="/Images/icon-new.png" />
+                            <Border Margin="0 0 50 0" BorderThickness="3" BorderBrush="#FF673AB7" Width="200" Height="285.714285714"  >
+                                <Image  HorizontalAlignment="Center" VerticalAlignment="Center" Source="/Images/matrix.jpg" Width="200" Height="285.714285714"  />
+                            </Border>
+                            <Image Width="90" Height="90" Margin="-490 0 0 195" Source="/Images/icon-new.png" />
+                            <Border Margin="0 0 50 0" BorderThickness="3" BorderBrush="#FF673AB7" Width="200" Height="285.714285714"  >
+                                <Image  HorizontalAlignment="Center" VerticalAlignment="Center" Source="/Images/spiderman.jpg" Width="200" Height="285.714285714"  />
+                            </Border>
+                            <Image Width="90" Height="90" Margin="-490 0 0 195" Source="/Images/icon-new.png" />
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="35 50 0 0">
+                            <Image Margin="0 0 20 0" HorizontalAlignment="Center" VerticalAlignment="Center" Source="/Images/bigpopcorn.png" Width="185" Height="185.211428571"  />
+                            <Image  Width="90" Height="90" Margin="-350 0 0 150" Source="/Images/icon-new.png" />
+                            <Image Margin="0 0 30 0" HorizontalAlignment="Center" VerticalAlignment="Center" Source="/Images/pepsizero.png" Width="185" Height="185.211428571"  />
+                            <Image Width="90" Height="90" Margin="-310 0 0 150" Source="/Images/icon-new.png" />
+                            <Image HorizontalAlignment="Center" VerticalAlignment="Center" Source="/Images/mirinda2.png" Width="185" Height="185.211428571"  />
+                            <Image Width="90" Height="90" Margin="-260 0 0 150" Source="/Images/icon-new.png" />
+                            <StackPanel Margin="85 0 0 0" VerticalAlignment="Center">
+                                <Label Margin="0 0 50 0" VerticalAlignment="Center" HorizontalAlignment="Right" Foreground="#FF673AB7" Content="Н О В І " FontSize="45" FontWeight="Black" FontFamily="Segoe UI">
+                                    <Label.Effect>
+                                        <DropShadowEffect Direction="0" Color="#FF673AB7" ShadowDepth="3" Opacity="0.75" BlurRadius="10"/>
+                                    </Label.Effect>
+                                </Label>
+                                <Label Margin="0 0 50 0" VerticalAlignment="Center" HorizontalAlignment="Right" Foreground="#FF673AB7" Content="С М А К О Л И К И" FontSize="45" FontWeight="Black" FontFamily="Segoe UI">
+                                    <Label.Effect>
+                                        <DropShadowEffect Direction="0" Color="#FF673AB7" ShadowDepth="3" Opacity="0.75" BlurRadius="10"/>
+                                    </Label.Effect>
+                                </Label>
+                            </StackPanel>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="35 50 0 0">
+                            <StackPanel Width="324.96" Margin="0 0 50 0" VerticalAlignment="Center">
+                                <Label Width="351.856666666667" Margin="0 0 50 0" HorizontalAlignment="Left" Foreground="#FF673AB7" Content="С К О Р О" FontSize="45" FontWeight="Black" FontFamily="Segoe UI">
+                                    <Label.Effect>
+                                        <DropShadowEffect Direction="0" Color="#FF673AB7" ShadowDepth="3" Opacity="0.75" BlurRadius="10"/>
+                                    </Label.Effect>
+                                </Label>
+                                <Label Margin="0 0 50 0" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="#FF673AB7" Content="У  К І Н О" FontSize="45" FontWeight="Black" FontFamily="Segoe UI">
+                                    <Label.Effect>
+                                        <DropShadowEffect Direction="0" Color="#FF673AB7" ShadowDepth="3" Opacity="0.75" BlurRadius="10"/>
+                                    </Label.Effect>
+                                </Label>
+                            </StackPanel>
+                            <Border Margin="0 0 50 0" BorderThickness="3" BorderBrush="#FF673AB7" Width="200" Height="285.714285714"  >
+                                <Image  HorizontalAlignment="Center" VerticalAlignment="Center" Source="/Images/batman.jpeg" Width="200" Height="285.714285714"  />
+                            </Border>
+                            <Image Width="90" Height="90" Margin="-480 0 0 195" Source="/Images/icon-soon.png" />
+                            <Border Margin="0 0 50 0" BorderThickness="3" BorderBrush="#FF673AB7" Width="200" Height="285.714285714"  >
+                                <Image  HorizontalAlignment="Center" VerticalAlignment="Center" Source="/Images/avatar2.jpeg" Width="200" Height="285.714285714"  />
+                            </Border>
+                            <Image Width="90" Height="90" Margin="-480 0 0 195" Source="/Images/icon-soon.png" />
+                            <Border Margin="0 0 50 0" BorderThickness="3" BorderBrush="#FF673AB7" Width="200" Height="285.714285714"  >
+                                <Image  HorizontalAlignment="Center" VerticalAlignment="Center" Source="/Images/doctorstrange.jpeg" Width="200" Height="285.714285714"  />
+                            </Border>
+                            <Image Width="90" Height="90" Margin="-480 0 0 195" Source="/Images/icon-soon.png" />
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>

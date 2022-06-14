@@ -1,0 +1,493 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3645779C-8F7C-4966-AB65-4BD527884204}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>usersApp</RootNamespace>
+    <AssemblyName>usersApp</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="HamburgerMenu, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\HamburgerMenu.0.1.0\lib\net40\HamburgerMenu.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignColors, Version=2.0.5.0, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignColors.2.0.5\lib\net452\MaterialDesignColors.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.Wpf, Version=4.4.0.0, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignThemes.4.4.0\lib\net452\MaterialDesignThemes.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="SautinSoft.Document, Version=5.5.4.14, Culture=neutral, PublicKeyToken=e759c76c7515592a, processorArchitecture=MSIL">
+      <HintPath>..\packages\sautinsoft.document.5.5.4.14\lib\net472\SautinSoft.Document.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SQLite, Version=1.0.115.5, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.5\lib\net46\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.115.5, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.115.5\lib\net46\System.Data.SQLite.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.115.5, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.115.5\lib\net46\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="XamlAnimatedGif, Version=2.0.0.0, Culture=neutral, PublicKeyToken=20a987d8023d9690, processorArchitecture=MSIL">
+      <HintPath>..\packages\XamlAnimatedGif.2.0.2\lib\net45\XamlAnimatedGif.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Classes\CinemaClasses\CinemaMovie.cs" />
+    <Compile Include="Classes\CinemaClasses\CinemaOrder.cs" />
+    <Compile Include="Classes\CinemaClasses\CinemaPlace.cs" />
+    <Compile Include="Classes\CinemaClasses\CinemaProduct.cs" />
+    <Compile Include="Classes\CinemaClasses\CinemaShopProduct.cs" />
+    <Compile Include="Classes\DataBaseClasses\AppContext.cs" />
+    <Compile Include="Classes\DataBaseClasses\Movie.cs" />
+    <Compile Include="Classes\DataBaseClasses\Product.cs" />
+    <Compile Include="CustomControls\AuthRegTextBoxControl.xaml.cs">
+      <DependentUpon>AuthRegTextBoxControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\CinemaPlaceControl.xaml.cs">
+      <DependentUpon>CinemaPlaceControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\ContactControl.xaml.cs">
+      <DependentUpon>ContactControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\MovieControl.xaml.cs">
+      <DependentUpon>MovieControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\ProductControl.xaml.cs">
+      <DependentUpon>ProductControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\AuthWindow.xaml.cs">
+      <DependentUpon>AuthWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\BuyingPage.xaml.cs">
+      <DependentUpon>BuyingPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\CinemaHall.xaml.cs">
+      <DependentUpon>CinemaHall.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\FavouritePage.xaml.cs">
+      <DependentUpon>FavouritePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\HomePage.xaml.cs">
+      <DependentUpon>HomePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\MesBox.xaml.cs">
+      <DependentUpon>MesBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\MovieDetails.xaml.cs">
+      <DependentUpon>MovieDetails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MoviesPage.xaml.cs">
+      <DependentUpon>MoviesPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SupportPage.xaml.cs">
+      <DependentUpon>SupportPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\DataBaseClasses\User.cs" />
+    <Compile Include="Pages\UserPage.xaml.cs">
+      <DependentUpon>UserPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\OrderWindow.xaml.cs">
+      <DependentUpon>OrderWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\SuccessPopUpWindow.xaml.cs">
+      <DependentUpon>SuccessPopUpWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\UserPageWindow.xaml.cs">
+      <DependentUpon>UserPageWindow.xaml</DependentUpon>
+    </Compile>
+    <Page Include="CustomControls\AuthRegTextBoxControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomControls\CinemaPlaceControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomControls\ContactControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomControls\MovieControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomControls\ProductControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\AuthWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\BuyingPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\CinemaHall.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ResourceDictionaries\DictionaryContainingScrollbarStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\FavouritePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\HomePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Windows\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Windows\MesBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\MovieDetails.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\MoviesPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\SupportPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\UserPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\OrderWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\SuccessPopUpWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\UserPageWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="database.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="OrderTicketsFiles\TemporaryFiles\TemporaryTicket.docx" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\person.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\favorite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\list.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\cinema2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\question2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\facebook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\telegram.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\viber.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\whatsapp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\insagram.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\youtube.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\popcorn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\movie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\bigpopcorn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\middlepopcorn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\smallpopcorn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\pepsi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\pepsizero.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\glasses.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\pepsismall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\7up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\water2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\mirinda2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\freeguy.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\bossbaby.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\dolittle.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\finch.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\frozen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\jumanji.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\kingrichard.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\kingsman.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\matrix.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\monsters.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\nottimetodie.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\rednotice.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\sonik2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\spiderman.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\tomandjerry.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\toystorry.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\uncharted.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\venom2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\CinemaScreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\play.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\chairs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\reload.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\icon-new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\icon-soon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\batman.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\avatar2.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\doctorstrange.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\success.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\trash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\visa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\mastercard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\cash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Word">
+      <Guid>{00020905-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="OrderTicketsFiles\GeneratedFiles\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Данный проект ссылается на пакеты NuGet, отсутствующие на этом компьютере. Используйте восстановление пакетов NuGet, чтобы скачать их.  Дополнительную информацию см. по адресу: http://go.microsoft.com/fwlink/?LinkID=322105. Отсутствует следующий файл: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.5\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.5\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets'))" />
+    <Error Condition="!Exists('..\packages\MaterialDesignThemes.4.4.0\build\MaterialDesignThemes.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MaterialDesignThemes.4.4.0\build\MaterialDesignThemes.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <Import Project="..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.5\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets" Condition="Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.5\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" />
+  <Import Project="..\packages\MaterialDesignThemes.4.4.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.4.4.0\build\MaterialDesignThemes.targets')" />
+</Project>

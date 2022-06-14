@@ -1,0 +1,69 @@
+﻿<Page x:Class="usersApp.Pages.MoviesPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:usersApp"
+      xmlns:controls="clr-namespace:usersApp.CustomControls"
+      mc:Ignorable="d" 
+      d:DesignHeight="2740" d:DesignWidth="1244"
+      Title="MoviesPage">
+    <Grid Background="#ffdadada">
+        <ScrollViewer>
+            <StackPanel>
+                <StackPanel Orientation="Horizontal" Background="#FF673AB7" HorizontalAlignment="Left">
+                    <Image Source="/Images/movie.png" Height="80" Width="80" Margin="10 0 10 0">
+                        <Image.Effect>
+                            <DropShadowEffect Direction="0" Color="White" BlurRadius="10" ShadowDepth="0" Opacity="0.7"/>
+                        </Image.Effect>
+                    </Image>
+                    <Label Width="1125" Content="Зараз у прокаті" FontSize="50" Padding="10 0 0 0" Foreground="White" FontFamily="Segoe UI Black">
+                        <Label.Effect>
+                            <DropShadowEffect Direction="0" Color="White" ShadowDepth="0" Opacity="0.5" BlurRadius="10"/>
+                        </Label.Effect>
+                    </Label>
+                </StackPanel>
+                <Border Margin="15" Background="White" Width="1186" CornerRadius="50" Height="2630">
+                    <Border.Effect>
+                        <DropShadowEffect BlurRadius="30" Color="LightGray" ShadowDepth="0"/>
+                    </Border.Effect>
+                    <StackPanel>
+                        <StackPanel>
+                            <Image HorizontalAlignment="Right" Source="/Images/cinema2.png" Width="175" Margin="0 -27 30 0">
+                                <Image.Effect>
+                                    <DropShadowEffect Direction="0" Color="Black" BlurRadius="10" ShadowDepth="0" Opacity="1"/>
+                                </Image.Effect>
+                            </Image>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <StackPanel  Margin="0 10 0 0" Width="395.333333333" Orientation="Vertical">
+                                <controls:MovieControl YearOfIssue="2021" MovieDuration="1год 55хв" CountryOfProduction="США" MovieStudio="20th Century Studios" MinAge="12"  MovieGenre="Комедія, бойовик" LinkTrailer="https://www.youtube.com/watch?v=JORN2hkXLyM" MovieImageSource="/Images/freeguy.jpeg" MovieName="Персонаж"></controls:MovieControl>
+                                <controls:MovieControl YearOfIssue="2021" MovieDuration="1год 47хв" CountryOfProduction="США" MovieStudio="DreamWorks Animation" MinAge="0"  MovieGenre="Комедія, пригоди" LinkTrailer="https://www.youtube.com/watch?v=EWizz52lZvw" Margin="0 30 0 0" MovieImageSource="/Images/bossbaby.jpg" MovieName="Бебі бос 2: Сімейний Бізнес"></controls:MovieControl>
+                                <controls:MovieControl YearOfIssue="2020" MovieDuration="1год 41хв" CountryOfProduction="США" MovieStudio="Universal Studios" MinAge="0"  MovieGenre="Пригоди, фантастика" LinkTrailer="https://www.youtube.com/watch?v=FEf412bSPLs"  Margin="0 30 0 0" MovieImageSource="/Images/dolittle.jpg" MovieName="Дулітл"></controls:MovieControl>
+                                <controls:MovieControl YearOfIssue="2020" MovieDuration="1год 55хв" CountryOfProduction="США, Великобританія" MovieStudio="Universal Studios" MinAge="16"  MovieGenre="Фантастика" LinkTrailer="https://www.youtube.com/watch?v=-0bYWnP3jH4" Margin="0 30 0 0" MovieImageSource="/Images/finch.jpg" MovieName="Фінч"></controls:MovieControl>
+                                <controls:MovieControl YearOfIssue="2022" MovieDuration="2год 0хв" CountryOfProduction="США, Канада" MovieStudio="Paramount Pictures" MinAge="12"  MovieGenre="Пригоди, екшн" LinkTrailer="https://www.youtube.com/watch?v=G5kzUpWAusI" Margin="0 30 0 0" MovieImageSource="/Images/sonik2.jpg" MovieName="Їжак Сонік 2"></controls:MovieControl>
+                                <controls:MovieControl YearOfIssue="2019" MovieDuration="1год 40хв" CountryOfProduction="США" MovieStudio="Disney" MinAge="0"  MovieGenre="Анімація, сімейний" LinkTrailer="https://www.youtube.com/watch?v=wmiIUN-7qhE" Margin="0 30 0 0" MovieImageSource="/Images/toystorry.jpg" MovieName="Історія іграшок 4"></controls:MovieControl>
+                            </StackPanel>
+                            <StackPanel  Margin="0 10 0 0" Width="395.333333333" Orientation="Vertical">
+                                <controls:MovieControl YearOfIssue="2019" MovieDuration="1год 43хв" CountryOfProduction="США" MovieStudio="Disney" MinAge="0"  MovieGenre="Сімейний, пригоди" LinkTrailer="https://www.youtube.com/watch?v=Zi4LMpSDccc" MovieImageSource="/Images/frozen.jpg" MovieName="Крижане серце 2"></controls:MovieControl>
+                                <controls:MovieControl YearOfIssue="2021" MovieDuration="2год 3хв" CountryOfProduction="США" MovieStudio="Sony Pictures Entertainment" MinAge="12"  MovieGenre="Екшн, пригоди" LinkTrailer="https://www.youtube.com/watch?v=rBxcF-r9Ibs" Margin="0 30 0 0" MovieImageSource="/Images/jumanji.jpg" MovieName="Джуманджі 2: Наступний рівень"></controls:MovieControl>
+                                <controls:MovieControl YearOfIssue="2021" MovieDuration="2год 25хв" CountryOfProduction="США" MovieStudio="Warner Bros. Pictures" MinAge="16"  MovieGenre="Драма, біографічний" LinkTrailer="https://www.youtube.com/watch?v=BKP_0z52ZAw" Margin="0 30 0 0" MovieImageSource="/Images/kingrichard.jpg" MovieName="Король Річард"></controls:MovieControl>
+                                <controls:MovieControl YearOfIssue="2022" MovieDuration="2год 11хв" CountryOfProduction="США, Великобританія" MovieStudio="20th Century Studios" MinAge="16"  MovieGenre="Фантастика" LinkTrailer="https://www.youtube.com/watch?v=5zdBG-iGfes" Margin="0 30 0 0" MovieImageSource="/Images/kingsman.jpg" MovieName="Кінгс Мен"></controls:MovieControl>
+                                <controls:MovieControl YearOfIssue="2021" MovieDuration="2год 28хв" CountryOfProduction="США, Канада" MovieStudio="Sony Pictures Entertainment" MinAge="12"  MovieGenre="Пригоди, екшн" LinkTrailer="https://www.youtube.com/watch?v=JfVOs4VSpmA" Margin="0 30 0 0" MovieImageSource="/Images/spiderman.jpg" MovieName="Людина-павук: Додому шляху нема"></controls:MovieControl>
+                                <controls:MovieControl YearOfIssue="2022" MovieDuration="1год 56хв" CountryOfProduction="США" MovieStudio="Sony Pictures Entertainment" MinAge="12"  MovieGenre="Екшн, бойовик" LinkTrailer="https://www.youtube.com/watch?v=eHp3MbsCbMg" Margin="0 30 0 0" MovieImageSource="/Images/uncharted.jpeg" MovieName="Незвідане: Удача Дрейка"></controls:MovieControl>
+                            </StackPanel>
+                            <StackPanel Margin="0 10 0 0" Width="395.333333333" Orientation="Vertical">
+                                <controls:MovieControl YearOfIssue="2021" MovieDuration="2год 28хв" CountryOfProduction="США" MovieStudio="Warner Bros. Pictures" MinAge="16"  MovieGenre="Екшн, бойовик" LinkTrailer="https://www.youtube.com/watch?v=9ix7TUGVYIo" MovieImageSource="/Images/matrix.jpg" MovieName="Матриця 4: Воскресіння"></controls:MovieControl>
+                                <controls:MovieControl YearOfIssue="2022" MovieDuration="2год 0хв" CountryOfProduction="США" MovieStudio="Sony Pictures Animation" MinAge="0"  MovieGenre="Анімація, пригоди" LinkTrailer="https://www.youtube.com/watch?v=7AP86CYeR30" Margin="0 30 0 0" MovieImageSource="/Images/monsters.jpg" MovieName="Монстри на канікулах 4"></controls:MovieControl>
+                                <controls:MovieControl YearOfIssue="2021" MovieDuration="2год 43хв" CountryOfProduction="США, Великобританія" MovieStudio="Universal Studios" MinAge="12" MovieGenre="Пригоди, бойовик" LinkTrailer="https://www.youtube.com/watch?v=N_gD9-Oa0fg" Margin="0 30 0 0" MovieImageSource="/Images/nottimetodie.jpg" MovieName="007: Не час помирати"></controls:MovieControl>
+                                <controls:MovieControl YearOfIssue="2021" MovieDuration="1год 58хв" CountryOfProduction="США" MovieStudio="Netflix" MinAge="13" MovieGenre="Комедія, бойовик" LinkTrailer="https://www.youtube.com/watch?v=Pj0wz7zu3Ms" Margin="0 30 0 0" MovieImageSource="/Images/rednotice.jpg" MovieName="Червоне повідомлення"></controls:MovieControl>
+                                <controls:MovieControl YearOfIssue="2021" MovieDuration="1год 41хв" CountryOfProduction="США" MovieStudio="Warner Bros. Pictures" MinAge="0" MovieGenre="Анімація, сімейний" LinkTrailer="https://www.youtube.com/watch?v=kP9TfCWaQT4" Margin="0 30 0 0" MovieImageSource="/Images/tomandjerry.jpg" MovieName="Том і Джеррі"></controls:MovieControl>
+                                <controls:MovieControl YearOfIssue="2021" MovieDuration="1год 38хв" CountryOfProduction="США" MovieStudio="Sony Pictures Entertainment" MinAge="16" MovieGenre="Екшн, бойовик" LinkTrailer="https://www.youtube.com/watch?v=rrwBnlYOp4g" Margin="0 30 0 0" MovieImageSource="/Images/venom2.jpg" MovieName="Веном 2: Карнаж"></controls:MovieControl>
+                            </StackPanel>
+                         </StackPanel>
+                     </StackPanel>
+                </Border>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>

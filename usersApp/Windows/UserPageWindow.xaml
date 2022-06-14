@@ -1,0 +1,26 @@
+﻿<Window x:Class="usersApp.Windows.UserPageWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:HamburgerMenu="clr-namespace:HamburgerMenu;assembly=HamburgerMenu"
+        xmlns:local="clr-namespace:usersApp"
+        mc:Ignorable="d"
+        Icon="/Images/cinema2.png"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="Кінотеатр. Головне вікно" ResizeMode="CanMinimize" Height="700" Width="1300"  WindowStartupLocation="CenterScreen">
+        <Grid Background="#ffdadada" Height="681">
+        <StackPanel Orientation="Horizontal">
+            <HamburgerMenu:HamburgerMenu  MaxWidth="250" Cursor="Hand" BorderBrush="White" Background="#FF673AB7" MenuIconColor="White" SelectionIndicatorColor="White" MenuItemForeground="White" HorizontalAlignment="Left" Width="50">
+                <HamburgerMenu:HamburgerMenuItem x:Name="Ham1" Selected="Ham1_Selected" Icon="/Images/home.png" Text="Домашня сторінка"/>
+                <HamburgerMenu:HamburgerMenuItem x:Name="Ham2" Icon="/Images/person.png" Text="Про користувача" IsSelected="False" Selected="Ham2_Selected"/>
+                <HamburgerMenu:HamburgerMenuItem x:Name="Ham4" Icon="/Images/movie.png" Text="Зараз у прокаті" IsSelected="False" Selected="Ham4_Selected"/>
+                <HamburgerMenu:HamburgerMenuItem x:Name="Ham5" Icon="/Images/popcorn.png" Text="Смаколики та інше" IsSelected="False" Selected="Ham5_Selected"/>
+                <HamburgerMenu:HamburgerMenuItem x:Name="Ham3" Icon="/Images/favorite.png" Text="Обране" IsSelected="False" Selected="Ham3_Selected"/>
+                <HamburgerMenu:HamburgerMenuItem x:Name="Ham6" Icon="/Images/question2.png" Text="Служба підтримки" IsSelected="False" Selected="Ham6_Selected" Height="40" />
+                <HamburgerMenu:HamburgerMenuItem Margin="0 340 0 0" x:Name="Ha" Icon="/Images/cinema2.png" Text="© Cinema" IsSelected="False" IsEnabled="False" Height="40" />
+            </HamburgerMenu:HamburgerMenu>
+            <Frame Width="1235" Height="660" VerticalAlignment="Top" x:Name="ContentFrame" NavigationUIVisibility="Hidden"/>
+        </StackPanel>
+    </Grid>
+</Window>

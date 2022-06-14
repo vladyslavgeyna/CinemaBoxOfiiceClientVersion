@@ -1,0 +1,114 @@
+﻿<Window x:Class="usersApp.Windows.MovieDetails"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:usersApp"
+         Icon="/Images/cinema2.png"
+        Title="Кінотеатр. Деталі фільму" Height="780" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize" Width="860">
+
+    <Grid Background="#ffdadada">
+        <Border Height="700" Width="810" Margin="15" Background="White" VerticalAlignment="Center" Padding="15" CornerRadius="30">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="30" Color="LightGray" ShadowDepth="0"/>
+            </Border.Effect>
+            <StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Border BorderThickness="3" BorderBrush="#FF673AB7" Width="266" Height="380"  >
+                        <Image HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="ImageMovie" Height="380" Width="266"/>
+                    </Border>
+                    <StackPanel VerticalAlignment="Top" Orientation="Vertical">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Width="151" Margin="10 10 0 0" Text="Назва: " FontFamily="Segoe UI Black" FontSize="20"/>
+                            <TextBlock x:Name="textBlockNameOfMovie" Margin="10 10 0 0" FontFamily="Segoe UI Semibold" FontSize="20"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Width="151" Margin="10 15 0 0" Text="Вік: " FontFamily="Segoe UI Black" FontSize="20"/>
+                            <TextBlock x:Name="textBlockMinAge" Margin="10 15 0 0" FontFamily="Segoe UI Semibold" FontSize="20"/>
+                            <TextBlock Margin="0 15 0 0" FontFamily="Segoe UI Semibold" FontSize="20">+</TextBlock>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Width="151" Margin="10 15 0 0" Text="Рік: " FontFamily="Segoe UI Black" FontSize="20"/>
+                            <TextBlock x:Name="textBlockYearOfIssue" Margin="10 15 0 0" FontFamily="Segoe UI Semibold" FontSize="20"/>
+                        </StackPanel>
+                        <StackPanel  Orientation="Horizontal">
+                            <TextBlock Width="151" Margin="10 15 0 0" Text="Тривалість: " FontFamily="Segoe UI Black" FontSize="20"/>
+                            <TextBlock x:Name="textBlockMovieDuration" Margin="10 15 0 0" FontFamily="Segoe UI Semibold" FontSize="20"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Margin="10 15 0 0" Text="Виробництво: " FontFamily="Segoe UI Black" FontSize="20" Width="151"/>
+                            <TextBlock x:Name="textBlockCountryOfProduction" Margin="10 15 0 0" FontFamily="Segoe UI Semibold" FontSize="20"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Width="151" Margin="10 15 0 0" Text="Жанр: " FontFamily="Segoe UI Black" FontSize="20"/>
+                            <TextBlock x:Name="textBlockMovieGenre" Margin="10 15 0 0" FontFamily="Segoe UI Semibold" FontSize="20"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Width="151" Margin="10 15 0 0" Text="Студія: " FontFamily="Segoe UI Black" FontSize="20"/>
+                            <TextBlock  x:Name="textBlockMovieStudio" Margin="10 15 0 0" FontFamily="Segoe UI Semibold" FontSize="20"/>
+                        </StackPanel>
+                        <StackPanel >
+                            <Button  x:Name="watchTrailer" BorderBrush="Black" BorderThickness="3" Height="50" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="10 44 0 0" Cursor="Hand" Click="watchTrailer_Click">
+                                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal">
+                                    <Image Margin="0 0 10 0" VerticalAlignment="Center" Source="/Images/play.png" Width="30" />
+                                    <TextBlock FontSize="22" VerticalAlignment="Center" Text="Дивитись трейлер" Height="30" FontFamily="Segoe UI Black"/>
+                                </StackPanel>
+                            </Button>
+                        </StackPanel>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Background="#FF673AB7" Margin="0 10 0 0">
+                    <Image VerticalAlignment="Center" Height="40" Source="/Images/chairs.png" Margin="10 0 10 0">
+                        <Image.Effect>
+                            <DropShadowEffect Direction="0" Color="White" BlurRadius="10" ShadowDepth="0" Opacity="0.5"/>
+                        </Image.Effect>
+                    </Image>
+                    <TextBlock VerticalAlignment="Center" Margin="0 5 0 5" Foreground="White" Text="Сеанси:" FontFamily="Segoe UI Black" FontSize="30" Height="40"  >
+                        <TextBlock.Effect>
+                            <DropShadowEffect Direction="0" Color="White" ShadowDepth="0" Opacity="0.5" BlurRadius="10"/>
+                        </TextBlock.Effect>
+                    </TextBlock>
+                </StackPanel>
+                <StackPanel Orientation="Vertical">
+                    <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                        <StackPanel Margin="0 10 50 0" Orientation="Horizontal">
+                            <TextBlock  FontFamily="Segoe UI Black" FontSize="20" VerticalAlignment="Center">Оберіть дату:</TextBlock>
+                            <DatePicker x:Name="datePickerDate" VerticalAlignment="Center" Width="150" Margin="15 0 0 0"  FirstDayOfWeek="Monday" ToolTip="Обрання дати" FontSize="20" FontFamily="Segoe UI" FontWeight="SemiBold" CalendarClosed="datePickerDate_CalendarClosed"></DatePicker>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock  FontFamily="Segoe UI Black" FontSize="20"  VerticalAlignment="Center" Width="137.443333333333">Оберіть час:</TextBlock>
+                            <ComboBox x:Name="comboBoxTime" Margin="15 0 0 0"  FontSize="20" FontFamily="Segoe UI" FontWeight="SemiBold" Width="150" IsEditable="False" ToolTip="Обрання часу" IsReadOnly="True" Cursor="Hand" SelectionChanged="comboBoxTime_SelectionChanged">
+                                <ComboBoxItem>09:00</ComboBoxItem>
+                                <ComboBoxItem>12:00</ComboBoxItem>
+                                <ComboBoxItem>15:00</ComboBoxItem>
+                                <ComboBoxItem>18:00</ComboBoxItem>
+                                <ComboBoxItem>21:00</ComboBoxItem>
+                            </ComboBox>
+                        </StackPanel>
+                    </StackPanel>
+                    <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" Margin="0 15 0 0">
+                        <TextBlock Margin="0 0 15 0" FontFamily="Segoe UI Black" FontSize="20">Я маю:</TextBlock>
+                        <RadioButton Margin="0 0 25 0" x:Name="radioButtonSchoolChild" FontFamily="Segoe UI Semibold" FontSize="18"  VerticalContentAlignment="Center" >Учнівський квиток</RadioButton>
+                        <RadioButton Margin="0 0 25 0" x:Name="radioButtonPension" FontFamily="Segoe UI Semibold" FontSize="18" VerticalContentAlignment="Center" >Пенсійне посвідчення</RadioButton>
+                        <RadioButton x:Name="radioButtonStudent" FontFamily="Segoe UI Semibold" FontSize="18"  VerticalContentAlignment="Center">Студентський квиткок</RadioButton>
+                    </StackPanel>
+                    <StackPanel  HorizontalAlignment="Center" Orientation="Horizontal" Margin="0 20 0 0">
+                        <TextBlock  Margin="0 0 10 0" FontFamily="Segoe UI Black" FontSize="20">Варість сеансу:</TextBlock>
+                        <TextBlock Width="34.51" x:Name="textBlockPriceOfSession" FontFamily="Segoe UI Bold" FontSize="20" Visibility="Hidden"></TextBlock>
+                        <TextBlock Margin="3 0 10 0" x:Name="textBlockUAH" FontFamily="Segoe UI Bold" FontSize="20" Visibility="Hidden">грн</TextBlock>
+                        <Button Style="{StaticResource MaterialDesignFlatButton}" x:Name="buttonReloadPrice" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Cursor="Hand" Click="buttonReloadPrice_Click" >
+                            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal">
+                                <Image Margin="0 0 3 0" VerticalAlignment="Center" Source="/Images/reload.png" Width="25" />
+                                <TextBlock FontSize="20" VerticalAlignment="Center" Text="Оновити вартість" FontFamily="Segoe UI Black" Foreground="Black"/>
+                            </StackPanel>
+                        </Button>
+                    </StackPanel>
+                    <StackPanel HorizontalAlignment="Center" Margin="0 25 0 0" Orientation="Horizontal">
+                        <Button x:Name="buttonСhoosePlace" BorderThickness="3" BorderBrush="Black" FontSize="20" VerticalAlignment="Center" Height="45"  FontFamily="Segoe UI Black" Width="654.886666667" Cursor="Hand" Click="buttonСhoosePlace_Click">Обрати місце</Button>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>

@@ -1,0 +1,60 @@
+﻿<Page x:Class="usersApp.Pages.SupportPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:usersApp"
+      xmlns:controls="clr-namespace:usersApp.CustomControls"
+      mc:Ignorable="d"
+      d:DesignHeight="660" d:DesignWidth="1244"
+      Title="SupportPage">
+    <Grid Background="#ffdadada">
+        <ScrollViewer >
+            <StackPanel>
+                <StackPanel Orientation="Horizontal" Background="#FF673AB7" HorizontalAlignment="Left">
+                    <Image Source="/Images/question2.png" Height="80" Width="80" Margin="10 0 10 0">
+                        <Image.Effect>
+                            <DropShadowEffect Direction="0" Color="White" BlurRadius="10" ShadowDepth="0" Opacity="0.7"/>
+                        </Image.Effect>
+                    </Image>
+                    <Label Width="1125"  Content="Служба підтримки" FontSize="50" Padding="10 0 0 0" Foreground="White" FontFamily="Segoe UI Black">
+                        <Label.Effect>
+                            <DropShadowEffect Direction="0" Color="White" ShadowDepth="0" Opacity="0.5" BlurRadius="10"/>
+                        </Label.Effect>
+                    </Label>
+                </StackPanel>
+                <Border Margin="15" Background="White" Width="1186" CornerRadius="50" Height="550">
+                    <Border.Effect>
+                        <DropShadowEffect BlurRadius="30" Color="LightGray" ShadowDepth="0"/>
+                    </Border.Effect>
+                    <StackPanel >
+                        <StackPanel>
+                            <Image HorizontalAlignment="Right" Source="/Images/cinema2.png" Width="175" Margin="0 -27 30 0">
+                                <Image.Effect>
+                                    <DropShadowEffect Direction="0" Color="Black" BlurRadius="10" ShadowDepth="0" Opacity="1"/>
+                                </Image.Effect>
+                            </Image>
+                        </StackPanel>
+                        <TextBlock Margin="0 -30.3 0 0" Padding="25 0 25 0" Foreground="White" Text="Наші контакти" HorizontalAlignment="Center" FontWeight="Bold" FontSize="70" TextDecorations="{x:Null}" Height="90" FontFamily="Segoe UI Black" >
+                            <TextBlock.Effect>
+                                <DropShadowEffect Direction="0" Color="#FF673AB7" Opacity="1" BlurRadius="10" ShadowDepth="0"/>
+                            </TextBlock.Effect>
+                        </TextBlock>
+                        <StackPanel Orientation="Horizontal" Margin="0 25 0 0">
+                            <StackPanel Margin="30 0 0 0"  HorizontalAlignment="Left" Orientation="Vertical" >
+                                <controls:ContactControl ContactLink="https://www.facebook.com/" ContactName="-  Facebook" ContactImageSource="/Images/facebook.png"></controls:ContactControl>
+                                <controls:ContactControl Margin="0 35 0 0" ContactLink="https://www.whatsapp.com/" ContactName="-  WhatsApp" ContactImageSource="/Images/whatsapp.png"></controls:ContactControl>
+                                <controls:ContactControl Margin="0 35 0 0" ContactLink="https://telegram.org/" ContactName="-  Telegram" ContactImageSource="/Images/telegram.png"></controls:ContactControl>
+                            </StackPanel>
+                            <StackPanel Margin="340 0 0 0" HorizontalAlignment="Right"  Orientation="Vertical">
+                                <controls:ContactControl ContactLink="https://www.instagram.com/" ContactName="-  Instagram" ContactImageSource="/Images/insagram.png"></controls:ContactControl>
+                                <controls:ContactControl Margin="0 35 0 0" ContactLink="https://www.viber.com/ru/" ContactName="-  Viber" ContactImageSource="/Images/viber.png"></controls:ContactControl>
+                                <controls:ContactControl Margin="0 35 0 0" ContactLink="https://www.youtube.com/" ContactName="-  YouTube" ContactImageSource="/Images/youtube.png"></controls:ContactControl>
+                            </StackPanel>
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>

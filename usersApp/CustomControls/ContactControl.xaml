@@ -1,0 +1,42 @@
+﻿<UserControl x:Class="usersApp.CustomControls.ContactControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:usersApp.CustomControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="100" d:DesignWidth="350">
+    <UserControl.Triggers>
+        <EventTrigger RoutedEvent="MouseEnter">
+            <BeginStoryboard>
+                <Storyboard>
+                    <ColorAnimation Storyboard.TargetName="TextBlockContactName" Duration="0:0:0.2"
+                                            Storyboard.TargetProperty="Foreground.Color"
+                                            To="#FF673AB7">
+                    </ColorAnimation>
+                </Storyboard>
+            </BeginStoryboard>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="MouseLeave">
+            <BeginStoryboard>
+                <Storyboard>
+                    <ColorAnimation Storyboard.TargetName="TextBlockContactName" Duration="0:0:0.2"
+                                            Storyboard.TargetProperty="Foreground.Color" To="Black">
+                    </ColorAnimation>
+                </Storyboard>
+            </BeginStoryboard>
+        </EventTrigger>
+    </UserControl.Triggers>
+    <Grid>
+        <StackPanel >
+            <TextBlock Foreground="{x:Null}" >
+                <Hyperlink x:Name="HyperLinkContact" TextDecorations="{x:Null}" Foreground="{x:Null}" Click="HyperLinkContact_Click" >
+                    <StackPanel Orientation="Horizontal" >
+                        <Image x:Name="ImageContact" VerticalAlignment="Center"  Source="/Images/facebook.png" Width="100" Margin="15 0 5 0"/>
+                        <TextBlock Foreground="Black" x:Name="TextBlockContactName" VerticalAlignment="Center" Text="- Facebook" FontSize="45" TextDecorations="{x:Null}" FontFamily="Segoe UI" FontWeight="SemiBold"  />
+                    </StackPanel>
+                </Hyperlink>
+            </TextBlock>
+        </StackPanel>
+    </Grid>
+</UserControl>

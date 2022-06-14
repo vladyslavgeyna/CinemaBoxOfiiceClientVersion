@@ -1,0 +1,67 @@
+﻿<Page x:Class="usersApp.Pages.BuyingPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:usersApp"
+      xmlns:controls="clr-namespace:usersApp.CustomControls"
+      mc:Ignorable="d" 
+      d:DesignHeight="660" d:DesignWidth="1244"
+      Title="BuyingPage">
+    <Grid Background="#ffdadada">
+        <ScrollViewer>
+            <StackPanel>
+                <StackPanel Orientation="Horizontal" Background="#FF673AB7" HorizontalAlignment="Left">
+                    <Image Source="/Images/popcorn.png" Height="80" Width="80" Margin="10 0 10 0">
+                        <Image.Effect>
+                            <DropShadowEffect Direction="0" Color="White" BlurRadius="10" ShadowDepth="0" Opacity="0.7"/>
+                        </Image.Effect>
+                    </Image>
+                    <Label Width="1125" Content="Смаколики та інше" FontSize="50" Padding="10 0 0 0" Foreground="White" FontFamily="Segoe UI Black">
+                        <Label.Effect>
+                            <DropShadowEffect Direction="0" Color="White" ShadowDepth="0" Opacity="0.5" BlurRadius="10"/>
+                        </Label.Effect>
+                    </Label>
+                </StackPanel>
+                <Border Margin="15" Background="White" Width="1186" CornerRadius="50" Height="2200">
+                    <Border.Effect>
+                        <DropShadowEffect BlurRadius="30" Color="LightGray" ShadowDepth="0"/>
+                    </Border.Effect>
+                    <StackPanel>
+                        <StackPanel>
+                            <Image HorizontalAlignment="Right" Source="/Images/cinema2.png" Width="175" Margin="0 -27 30 0">
+                                <Image.Effect>
+                                    <DropShadowEffect Direction="0" Color="Black" BlurRadius="10" ShadowDepth="0" Opacity="1"/>
+                                </Image.Effect>
+                            </Image>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <StackPanel Width="395.333333333" Orientation="Vertical">
+                                <controls:ProductControl ProductPrice="150" ProductName="Попкорн карамель великий" ProductImageSource="/Images/bigpopcorn.png"></controls:ProductControl>
+                                <controls:ProductControl Margin="0 25 0 0" ProductPrice="110" ProductName="Попкорн сир великий" ProductImageSource="/Images/bigpopcorn.png"></controls:ProductControl>
+                                <controls:ProductControl Margin="0 25 0 0" ProductPrice="110" ProductName="Попкорн сіль великий" ProductImageSource="/Images/bigpopcorn.png"></controls:ProductControl>
+                                <controls:ProductControl Margin="0 30 0 0" ProductPrice="25" ProductName="Pepsi 0,5 л" ProductImageSource="/Images/pepsi.png"></controls:ProductControl>
+                                <controls:ProductControl Margin="0 40 0 0" ProductPrice="25" ProductName="7up 0,5 л" ProductImageSource="/Images/7up.png"></controls:ProductControl>
+                                <controls:ProductControl Margin="0 25 0 0" ProductPrice="20" ProductName="3D окуляри" ProductImageSource="/Images/glasses.png"></controls:ProductControl>
+                            </StackPanel>
+                            <StackPanel Width="395.333333333" Orientation="Vertical">
+                                <controls:ProductControl ProductPrice="100" ProductName="Попкорн карамель середній" ProductImageSource="/Images/middlepopcorn.png"></controls:ProductControl>
+                                <controls:ProductControl Margin="0 25 0 0" ProductPrice="90" ProductName="Попкорн сир середній" ProductImageSource="/Images/middlepopcorn.png"></controls:ProductControl>
+                                <controls:ProductControl Margin="0 25 0 0" ProductPrice="90" ProductName="Попкорн сіль середній" ProductImageSource="/Images/middlepopcorn.png"></controls:ProductControl>
+                                <controls:ProductControl Margin="0 30 0 0" ProductPrice="25" ProductName="Pepsi Zero 0,5 л" ProductImageSource="/Images/pepsizero.png"></controls:ProductControl>
+                                <controls:ProductControl Margin="0 40 0 0" ProductPrice="25" ProductName="Mirinda 0,5 л" ProductImageSource="/Images/mirinda2.png"></controls:ProductControl>
+                            </StackPanel>
+                            <StackPanel Width="395.333333333" Orientation="Vertical">
+                                <controls:ProductControl ProductPrice="60" ProductName="Попкорн карамель маленький" ProductImageSource="/Images/smallpopcorn.png"></controls:ProductControl>
+                                <controls:ProductControl Margin="0 25 0 0" ProductPrice="40" ProductName="Попкорн сир маленький" ProductImageSource="/Images/smallpopcorn.png"></controls:ProductControl>
+                                <controls:ProductControl Margin="0 25 0 0" ProductPrice="40" ProductName="Попкорн сіль маленький" ProductImageSource="/Images/smallpopcorn.png"></controls:ProductControl>
+                                <controls:ProductControl Margin="0 30 0 0" ProductPrice="20" ProductName="Pepsi 0,33 л" ProductImageSource="/Images/pepsismall.png"></controls:ProductControl>
+                                <controls:ProductControl Margin="0 40 0 0" ProductPrice="20" ProductName="Вода Аква Мінерале 0,5 л" ProductImageSource="/Images/water2.png"></controls:ProductControl>
+                            </StackPanel>
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>

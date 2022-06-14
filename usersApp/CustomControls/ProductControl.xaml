@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="usersApp.CustomControls.ProductControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:usersApp.CustomControls"
+             mc:Ignorable="d" 
+            xmlns:gif="https://github.com/XamlAnimatedGif/XamlAnimatedGif"
+            d:DesignHeight="325" d:DesignWidth="395.333333333">
+    <Grid>
+        <StackPanel>
+            <Image x:Name="ImageProduct" Width="185" Height="185.211428571" gif:AnimationBehavior.SourceUri="/Images/bigpopcorn.png"></Image>
+            <TextBlock x:Name="TextBlockProductName" HorizontalAlignment="Center" Text="Попкорн карамель великий" FontFamily="Segoe UI " FontSize="22"/>
+            <TextBlock x:Name="TextBlockProductPrice" HorizontalAlignment="Center" Text="150" FontFamily="Segoe UI Bold" FontSize="22"/>
+            <StackPanel Margin="0 5 0 0" HorizontalAlignment="Center" Orientation="Horizontal">
+                <Button FontFamily="Segoe UI Bold"  Height="35" x:Name="ButtonProductDec" IsEnabled="False" BorderThickness="2" BorderBrush="Black" Content="–" FontSize="18" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" Width="50" Click="ButtonProductDec_Click"/>
+                <TextBox Height="35" x:Name="TextBlockProductCount" Text="0" Style="{StaticResource MaterialDesignDataGridTextColumnEditingStyle}" Width="75" BorderBrush="#FF673AB7" BorderThickness="3" CaretBrush="#FF673AB7" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"  Margin="5 0 5 0"  FontFamily="Segoe UI Semibold" FontSize="18" PreviewTextInput="TextBlockProductCount_PreviewTextInput" Cursor="IBeam" />
+                <Button FontFamily="Segoe UI Bold"  Height="35" x:Name="ButtonProductInc" BorderThickness="2" BorderBrush="Black"  Content="+" FontSize="18" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" Width="50" Click="ButtonProductInc_Click"  />
+            </StackPanel>
+            <Button Height="35" FontFamily="Segoe UI Bold" x:Name="ButtonToFavorite" BorderThickness="2" BorderBrush="Black" Content="В обране" Width="185" Margin="0 3 0 0" FontSize="18" Cursor="Hand" Click="ButtonToFavorite_Click" />
+        </StackPanel>
+    </Grid>
+</UserControl>
