@@ -14,6 +14,7 @@ namespace usersApp.Windows
         {
             InitializeComponent();
             datePickerDate.DisplayDateStart = DateTime.Now;
+            datePickerDate.DisplayDateEnd = DateTime.Now.AddDays(6);
         }
         private string linkTrailer;
         public string LinkTrailer
