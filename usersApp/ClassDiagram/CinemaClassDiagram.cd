@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="usersApp.Classes.CinemaClasses.CinemaMovie" Collapsed="true">
+    <Position X="18.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEIAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAACAAAAAA=</HashCode>
+      <FileName>Classes\CinemaClasses\CinemaMovie.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="CinemaPlace" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="usersApp.Classes.CinemaClasses.CinemaOrder" Collapsed="true">
+    <Position X="20" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\CinemaClasses\CinemaOrder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="usersApp.Classes.CinemaClasses.CinemaPlace" Collapsed="true">
+    <Position X="18.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAABAAAAAAAAAAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\CinemaClasses\CinemaPlace.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="usersApp.Classes.CinemaClasses.CinemaProduct" Collapsed="true">
+    <Position X="19" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\CinemaClasses\CinemaProduct.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="usersApp.Classes.CinemaClasses.CinemaShopProduct" Collapsed="true">
+    <Position X="20" Y="5.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\CinemaClasses\CinemaShopProduct.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="usersApp.AppContext" Collapsed="true">
+    <Position X="14.25" Y="5.5" Width="1.5" />
+    <AssociationLine Name="instance" Type="usersApp.AppContext" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="14.25" Y="5.802" />
+        <Point X="13.875" Y="5.802" />
+        <Point X="13.875" Y="5.296" />
+        <Point X="14.312" Y="5.296" />
+        <Point X="14.312" Y="5.5" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.11" Y="-0.047" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAEAAgAAAAAAAABABAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Classes\DataBaseClasses\AppContext.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="instance" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="usersApp.User" Collapsed="true">
+    <Position X="14.25" Y="7.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAEAAAAQAAAAEAAACAAAQAgAAEgA=</HashCode>
+      <FileName>Classes\DataBaseClasses\User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="usersApp.Classes.DataBaseClasses.Movie" Collapsed="true">
+    <Position X="16.25" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAJQQCgAQgAAAAAAAAIAEQAAAEEAAIBAAAACEAAAkA=</HashCode>
+      <FileName>Classes\DataBaseClasses\Movie.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="usersApp.Classes.DataBaseClasses.Product" Collapsed="true">
+    <Position X="16.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACABAAAgAQAAAAAAAAAAAASAAAAEgAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Classes\DataBaseClasses\Product.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="usersApp.Windows.AuthWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="14.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAQAAAAAAAAAAAAAAAAAAAAACAAABAAAAA=</HashCode>
+      <FileName>Windows\AuthWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="db" />
+      <Field Name="authUser" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="usersApp.Windows.CinemaHall" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="16.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAQQAAAAABAAAAAAAAAAAAAAAAAEABAAAAA=</HashCode>
+      <FileName>Windows\CinemaHall.xaml.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="db" />
+      <Field Name="movie" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="usersApp.Windows.MainWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="14.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gBAAABAgAAAQgAAAAAAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Windows\MainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="db" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="usersApp.Windows.MesBox" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="21.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAABAAAAAAAAAAAAAAQAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Windows\MesBox.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="usersApp.Windows.MovieDetails" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="22.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAEAAIAAACAAQAAAAAABAAAAAAAggAAAIAA=</HashCode>
+      <FileName>Windows\MovieDetails.xaml.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="cinemaMovie" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="usersApp.Windows.OrderWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="22.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAFCAAAEAAAAAAQAAACAAAAABAAAAAAAAAAAAAAgAEA=</HashCode>
+      <FileName>Windows\OrderWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="cinemaOrder" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="usersApp.Windows.SuccessPopUpWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="21.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Windows\SuccessPopUpWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="usersApp.Windows.UserPageWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="19.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAEAAAAAAAAAAAAAAAgAAAAAAFAAAgAAAAQAA=</HashCode>
+      <FileName>Windows\UserPageWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="usersApp.Pages.BuyingPage" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="21.5" Y="7.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Pages\BuyingPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="usersApp.Pages.FavouritePage" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12" Y="5.5" Width="1.5" />
+    <AssociationLine Name="db" Type="usersApp.AppContext">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.07" Y="0.048" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAECIAQAAAAABAAAAAAAAAAQAAAAAAAFAAAAAA=</HashCode>
+      <FileName>Pages\FavouritePage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="db" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="usersApp.Pages.HomePage" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="16.25" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Pages\HomePage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="usersApp.Pages.SupportPage" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="18" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Pages\SupportPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="usersApp.Pages.MoviesPage" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="19.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Pages\MoviesPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="usersApp.Pages.UserPage" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="18" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Pages\UserPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="usersApp.CustomControls.AuthRegTextBoxControl" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="18" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>iAAAAAAAABAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>CustomControls\AuthRegTextBoxControl.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="usersApp.CustomControls.CinemaPlaceControl" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="16.25" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CustomControls\CinemaPlaceControl.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="usersApp.CustomControls.ContactControl" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="19.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAIAAAAAAAAAAgAAAAAAAAAEAAAAAAEIAgADA=</HashCode>
+      <FileName>CustomControls\ContactControl.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="usersApp.CustomControls.MovieControl" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="22.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgABACEAQAAgAQQIQAAACEAABAAwAAEAUAgBAAAIAA=</HashCode>
+      <FileName>CustomControls\MovieControl.xaml.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="movieDetails" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="usersApp.CustomControls.ProductControl" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="16.25" Y="5" Width="1.5" />
+    <AssociationLine Name="cinemaShopProduct" Type="usersApp.Classes.CinemaClasses.CinemaShopProduct" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="17.406" Y="5" />
+        <Point X="17.406" Y="4.76" />
+        <Point X="18.497" Y="4.76" />
+        <Point X="18.497" Y="4.021" />
+        <Point X="21.125" Y="4.021" />
+        <Point X="21.125" Y="5.25" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AACgABAAAgQQBAAABAEAgAAACAIAAIAIAAAAAAiICAA=</HashCode>
+      <FileName>CustomControls\ProductControl.xaml.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="db" />
+      <Field Name="product" />
+      <Field Name="cinemaShopProduct" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

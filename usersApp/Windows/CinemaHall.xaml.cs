@@ -13,6 +13,8 @@ namespace usersApp.Windows
 {
     public partial class CinemaHall : Window
     {
+        private AppContext db;
+        private Movie movie;
         public CinemaHall()
         {
             InitializeComponent();
@@ -35,7 +37,7 @@ namespace usersApp.Windows
             {
                 if (AuthWindow.authUser != null)
                 {
-                    AppContext db = AppContext.GetInstance();
+                    db = AppContext.GetInstance();
                     List<Movie> movies = db.Movies.Where(b => b.User_Id == AuthWindow.authUser.id).ToList();
                     if(movies.Count >= 1)
                     {
@@ -48,7 +50,7 @@ namespace usersApp.Windows
                         if(MovieDetails.cinemaMovie != null)
                         {
                             MovieDetails.cinemaMovie.CinemaPlace = new CinemaPlace(comboBoxRow.SelectedIndex + 1, comboBoxColumn.SelectedIndex + 1);
-                            Movie movie = new Movie(MovieDetails.cinemaMovie.Name, MovieDetails.cinemaMovie.TimeOfSession, MovieDetails.cinemaMovie.DateOfSession.Day, MovieDetails.cinemaMovie.DateOfSession.Month, MovieDetails.cinemaMovie.DateOfSession.Year, MovieDetails.cinemaMovie.CinemaPlace.Row, MovieDetails.cinemaMovie.CinemaPlace.Column, MovieDetails.cinemaMovie.Price, AuthWindow.authUser.id, MovieDetails.cinemaMovie.Plan);
+                            movie = new Movie(MovieDetails.cinemaMovie.Name, MovieDetails.cinemaMovie.TimeOfSession, MovieDetails.cinemaMovie.DateOfSession.Day, MovieDetails.cinemaMovie.DateOfSession.Month, MovieDetails.cinemaMovie.DateOfSession.Year, MovieDetails.cinemaMovie.CinemaPlace.Row, MovieDetails.cinemaMovie.CinemaPlace.Column, MovieDetails.cinemaMovie.Price, AuthWindow.authUser.id, MovieDetails.cinemaMovie.Plan);
                             db.Movies.Add(movie);
                             db.SaveChanges();
                             UserPageWindow.navigationPages[2] = new FavouritePage();

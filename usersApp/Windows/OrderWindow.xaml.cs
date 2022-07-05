@@ -158,7 +158,7 @@ namespace usersApp.Windows
         public static string BingPathToAppDir(string localPath)
         {
             string currentDir = Environment.CurrentDirectory;
-            DirectoryInfo directory = new DirectoryInfo(System.IO.Path.GetFullPath(System.IO.Path.Combine(currentDir, @"..\..\" + localPath)));
+            DirectoryInfo directory = new DirectoryInfo(Path.GetFullPath(Path.Combine(currentDir, @"..\..\" + localPath)));
             return directory.ToString();
         }
     }

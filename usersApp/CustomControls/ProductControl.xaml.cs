@@ -90,6 +90,9 @@ namespace usersApp.CustomControls
                 ButtonProductDec.IsEnabled = false;
             }
         }
+        private AppContext db;
+        private Product product;
+        private CinemaShopProduct cinemaShopProduct;
         private async void ButtonToFavorite_Click(object sender, RoutedEventArgs e)
         {
             if(TextBlockProductCount.Text == "" || int.Parse(TextBlockProductCount.Text) <= 0)
@@ -101,9 +104,9 @@ namespace usersApp.CustomControls
             {
                 if (AuthWindow.authUser != null)
                 {
-                    CinemaShopProduct cinemaShopProduct = new CinemaShopProduct(ProductName, int.Parse(ProductPrice), int.Parse(TextBlockProductCount.Text));
-                    AppContext db = AppContext.GetInstance();
-                    Product product = new Product(cinemaShopProduct.Name, cinemaShopProduct.Price, AuthWindow.authUser.id, cinemaShopProduct.Amount);
+                    cinemaShopProduct = new CinemaShopProduct(ProductName, int.Parse(ProductPrice), int.Parse(TextBlockProductCount.Text));
+                    db = AppContext.GetInstance();
+                    product = new Product(cinemaShopProduct.Name, cinemaShopProduct.Price, AuthWindow.authUser.id, cinemaShopProduct.Amount);
                     db.Products.Add(product);
                     db.SaveChanges();
                     UserPageWindow.navigationPages[2] = new FavouritePage();

@@ -12,6 +12,7 @@ namespace usersApp.Windows
     public partial class MainWindow : Window
     {
         private AppContext db;
+        private User RegUser;
         public MainWindow()
         {
             InitializeComponent();
@@ -74,8 +75,8 @@ namespace usersApp.Windows
             else
             {
                 password = GetHash(password);
-                User user = new User(login, password, name, age);
-                db.Users.Add(user);
+                RegUser = new User(login, password, name, age);
+                db.Users.Add(RegUser);
                 db.SaveChanges();
                 new MesBox("Реєстрація пройшла успішно", MessageType.Success, MessageButtons.Ok).ShowDialog();
                 AuthWindow authWindow = new AuthWindow();

@@ -78,9 +78,10 @@ namespace usersApp.CustomControls
             get { return movieStudio; }
             set { movieStudio = value; }
         }
+        private MovieDetails movieDetails;
         private void ButtonMovieDetails_Click(object sender, RoutedEventArgs e)
         {
-            MovieDetails movieDetails = new MovieDetails();
+            movieDetails = new MovieDetails();
             movieDetails.ImageMovie.Source = MovieImageSource;
             movieDetails.textBlockNameOfMovie.Text = MovieName;
             movieDetails.textBlockMinAge.Text = minAge.ToString();
