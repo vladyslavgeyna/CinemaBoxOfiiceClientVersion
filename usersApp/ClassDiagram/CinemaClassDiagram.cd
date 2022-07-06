@@ -49,7 +49,7 @@
         <Point X="14.312" Y="5.5" />
       </Path>
       <MemberNameLabel ManuallyPlaced="true">
-        <Position X="0.11" Y="-0.047" />
+        <Position X="0.417" Y="0.174" />
       </MemberNameLabel>
     </AssociationLine>
     <TypeIdentifier>
@@ -98,6 +98,11 @@
   </Class>
   <Class Name="usersApp.Windows.CinemaHall" Collapsed="true" BaseTypeListCollapsed="true">
     <Position X="16.25" Y="5.75" Width="1.5" />
+    <AssociationLine Name="db" Type="usersApp.AppContext">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.079" Y="0.06" />
+      </MemberNameLabel>
+    </AssociationLine>
     <TypeIdentifier>
       <HashCode>AAAgAAAAAAQQAAAAABAAAAAAAAAAAAAAAAAEABAAAAA=</HashCode>
       <FileName>Windows\CinemaHall.xaml.cs</FileName>
@@ -110,12 +115,21 @@
   </Class>
   <Class Name="usersApp.Windows.MainWindow" Collapsed="true" BaseTypeListCollapsed="true">
     <Position X="14.25" Y="4.5" Width="1.5" />
+    <AssociationLine Name="RegUser" Type="usersApp.User" ManuallyRouted="true">
+      <Path>
+        <Point X="14.25" Y="4.846" />
+        <Point X="11.886" Y="4.846" />
+        <Point X="11.886" Y="8.031" />
+        <Point X="14.25" Y="8.031" />
+      </Path>
+    </AssociationLine>
     <TypeIdentifier>
       <HashCode>gBAAABAgAAAQgAAAAAAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
       <FileName>Windows\MainWindow.xaml.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Field Name="db" />
+      <Field Name="RegUser" />
     </ShowAsAssociation>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
@@ -129,6 +143,11 @@
   </Class>
   <Class Name="usersApp.Windows.MovieDetails" Collapsed="true" BaseTypeListCollapsed="true">
     <Position X="22.25" Y="5.5" Width="1.5" />
+    <AssociationLine Name="cinemaMovie" Type="usersApp.Classes.CinemaClasses.CinemaMovie">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.389" Y="0.016" />
+      </MemberNameLabel>
+    </AssociationLine>
     <TypeIdentifier>
       <HashCode>ABAAAAAAAAEAAIAAACAAQAAAAAABAAAAAAAggAAAIAA=</HashCode>
       <FileName>Windows\MovieDetails.xaml.cs</FileName>
@@ -250,6 +269,11 @@
   </Class>
   <Class Name="usersApp.CustomControls.MovieControl" Collapsed="true" BaseTypeListCollapsed="true">
     <Position X="22.25" Y="4.25" Width="1.5" />
+    <AssociationLine Name="movieDetails" Type="usersApp.Windows.MovieDetails">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.1" Y="0.143" />
+      </MemberNameLabel>
+    </AssociationLine>
     <TypeIdentifier>
       <HashCode>AAgABACEAQAAgAQQIQAAACEAABAAwAAEAUAgBAAAIAA=</HashCode>
       <FileName>CustomControls\MovieControl.xaml.cs</FileName>
@@ -261,6 +285,11 @@
   </Class>
   <Class Name="usersApp.CustomControls.ProductControl" Collapsed="true" BaseTypeListCollapsed="true">
     <Position X="16.25" Y="5" Width="1.5" />
+    <AssociationLine Name="db" Type="usersApp.AppContext">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.069" Y="0.06" />
+      </MemberNameLabel>
+    </AssociationLine>
     <AssociationLine Name="cinemaShopProduct" Type="usersApp.Classes.CinemaClasses.CinemaShopProduct" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
       <Path>
         <Point X="17.406" Y="5" />
@@ -270,6 +299,9 @@
         <Point X="21.125" Y="4.021" />
         <Point X="21.125" Y="5.25" />
       </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.238" Y="-0.002" />
+      </MemberNameLabel>
     </AssociationLine>
     <TypeIdentifier>
       <HashCode>AACgABAAAgQQBAAABAEAgAAACAIAAIAIAAAAAAiICAA=</HashCode>
