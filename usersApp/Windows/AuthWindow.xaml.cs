@@ -42,9 +42,7 @@ namespace usersApp.Windows
                     this.Close();
                 }
                 else
-                {
                     new MesBox("Користувача не знайдено", MessageType.Error, MessageButtons.Ok).ShowDialog();
-                }
             }
         }
         private void Button_Red_Click(object sender, RoutedEventArgs e)

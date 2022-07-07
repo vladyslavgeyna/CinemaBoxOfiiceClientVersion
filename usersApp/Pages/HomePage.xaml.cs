@@ -9,9 +9,7 @@ namespace usersApp.Pages
         {
             InitializeComponent();
             if (AuthWindow.authUser != null)
-            {
                 textBlockNameOfUser.Text = AuthWindow.authUser.Name;
-            }
         }
     }
 }

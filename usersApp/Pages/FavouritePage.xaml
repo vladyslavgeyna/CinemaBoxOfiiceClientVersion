@@ -35,6 +35,9 @@
                                 </Image.Effect>
                             </Image>
                         </StackPanel>
+                        
+                        
+                        
                         <StackPanel x:Name="stackPanelProductsInfo" MinHeight="460" Margin="10 0 0 0">
                             <StackPanel Margin="0 -30 0 0" Height="60" Orientation="Horizontal">
                                 <TextBlock Width="657.373333333333" VerticalAlignment="Center" HorizontalAlignment="Left" x:Name="textBlockTitle" Margin="20 0 30 0" FontFamily="Segoe UI" FontWeight="Black" FontSize="40">В Вашому обраному поки пусто</TextBlock>
@@ -100,3 +103,4 @@
         </ScrollViewer>
     </Grid>
 </Page>
+    

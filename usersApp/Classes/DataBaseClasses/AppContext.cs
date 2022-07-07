@@ -14,15 +14,9 @@ namespace usersApp
         public static AppContext GetInstance()
         {
             if (instance == null)
-            {
                 lock (_lock)
-                {
                     if (instance == null)
-                    {
                         instance = new AppContext();
-                    }
-                }
-            }
             return instance;
         }
     }

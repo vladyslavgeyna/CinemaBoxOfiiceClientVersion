@@ -21,7 +21,7 @@ namespace usersApp.Pages
             {
                 db = AppContext.GetInstance();
                 products = db.Products.Where(b => b.User_Id == AuthWindow.authUser.id).ToList();
-                movies = db.Movies.Where(b => b.User_Id == AuthWindow.authUser.id).ToList();//можна в клас...
+                movies = db.Movies.Where(b => b.User_Id == AuthWindow.authUser.id).ToList();
                 if (products.Count != 0)
                 {
                     textBlockTitleProducts.Visibility = Visibility.Visible;
@@ -29,9 +29,7 @@ namespace usersApp.Pages
                     textBlockTitle.Text = "Ваше обране:";
                     listViewListOfProducts.ItemsSource = products;
                     foreach (Product product in products)
-                    {
                         totalProductsPrice += product.Price * product.Amount;
-                    }
                 }
                 if (movies.Count != 0)
                 {
@@ -40,9 +38,7 @@ namespace usersApp.Pages
                     textBlockTitle.Text = "Ваше обране:";
                     listViewListOfMovies.ItemsSource = movies;
                     foreach (Movie movie in movies)
-                    {
                         totalMoviesPrice += movie.Price;
-                    }
                 }
                 TotalPrice = totalMoviesPrice + totalProductsPrice;
                 if(TotalPrice != 0)
@@ -62,9 +58,7 @@ namespace usersApp.Pages
                 if (movies.Count != 0)
                 {
                     foreach (Movie movie in movies)
-                    {
                         db.Movies.Remove(movie);
-                    }
                     db.SaveChanges();
                     listViewListOfMovies.ItemsSource = null;
                     textBlockTitleMovies.Visibility = Visibility.Collapsed;
@@ -72,9 +66,7 @@ namespace usersApp.Pages
                 if (products.Count != 0)
                 {
                     foreach (Product product in products)
-                    {
                         db.Products.Remove(product);
-                    }
                     db.SaveChanges();
                     listViewListOfProducts.ItemsSource = null;
                     textBlockTitleProducts.Visibility = Visibility.Collapsed;

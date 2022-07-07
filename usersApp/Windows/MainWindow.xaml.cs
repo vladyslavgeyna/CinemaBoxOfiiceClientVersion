@@ -68,7 +68,6 @@ namespace usersApp.Windows
             {
                 textBoxLogin.textBoxInput.ToolTip = "Цей логін вже занятий іншим користувачем. Введіть інший";
                 textBoxLogin.textBoxInput.Background = Brushes.DarkRed;
-
                 new MesBox($"Цей логін вже занятий іншим користувачем\n{"Введіть інший",41}", MessageType.Warning, MessageButtons.Ok).ShowDialog();
                 return;
             }
@@ -95,13 +94,9 @@ namespace usersApp.Windows
             User user = null;
             user = db.Users.Where(b => b.Login == textBoxLogin.textBoxInput.Text.Trim()).FirstOrDefault();
             if (user != null)
-            {
                 return true;
-            }
             else
-            {
                 return false;
-            }
         }
         public static string GetHash(string text)
         {

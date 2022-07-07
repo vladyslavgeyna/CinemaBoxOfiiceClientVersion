@@ -48,17 +48,11 @@ namespace usersApp.Windows
                     {
                         string plan = null;
                         if(radioButtonPension.IsChecked == true)
-                        {
                             plan = "Пенсіонер";
-                        }
                         else if(radioButtonSchoolChild.IsChecked == true)
-                        {
                             plan = "Школяр";
-                        }
                         else if(radioButtonStudent.IsChecked == true)
-                        {
                             plan = "Студент";
-                        }
                         cinemaMovie = new CinemaMovie(textBlockNameOfMovie.Text, MakePriceOfSession(), datePickerDate.SelectedDate.Value, comboBoxTime.Text, plan);
                         this.Close();
                         CinemaHall cinemaHall = new CinemaHall();

@@ -24,15 +24,12 @@ namespace usersApp.Windows
             IsOrderMade = true;
             string paymentMethod = "";
             if (radioButtonCardPay.IsChecked == true)
-            {
                 paymentMethod = radioButtonCardPay.Content.ToString();
-            }
             else if (radioButtonCashPay.IsChecked == true)
-            {
                 paymentMethod = radioButtonCashPay.Content.ToString();
-            }
             cinemaOrder = new CinemaOrder(DateTime.Now, paymentMethod);
-            CreateWordDocument(BingPathToAppDir("OrderTicketsFiles\\TemporaryFiles\\TemporaryTicket.docx"), BingPathToAppDir($"OrderTicketsFiles\\GeneratedFiles\\CinemaOrder{AuthWindow.authUser.Login}Ticket.docx"));
+            string savePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + $"\\CinemaOrder{AuthWindow.authUser.Login}Ticket.docx";
+            CreateWordDocument(BingPathToAppDir("OrderTicketsFiles\\TemporaryFiles\\TemporaryTicket.docx"), savePath);
             //Перетворення в формат .pdf
             //DocumentCore documentCore = DocumentCore.Load($"C:\\Users\\Admin\\Desktop\\CinemaOrder{AuthWindow.authUser.Login}.docx");
             //documentCore.Save($"C:\\Users\\Admin\\Desktop\\CinemaOrder{AuthWindow.authUser.Login}.pdf");
@@ -55,14 +52,7 @@ namespace usersApp.Windows
             object visible = true;
             object replace = 2;
             object wrap = 1;
-            wordApp.Selection.Find.Execute(ref toFindText,
-                ref matchCase, ref matchWholeWord,
-                ref matchWildCards, ref matchSoundLike,
-                ref nmatchAllforms, ref forward,
-                ref wrap, ref format, ref replaceWithText,
-                ref replace, ref matchKashida,
-                ref matchDiactitics, ref matchAlefHamza,
-                ref matchControl);
+            wordApp.Selection.Find.Execute(ref toFindText, ref matchCase, ref matchWholeWord, ref matchWildCards, ref matchSoundLike, ref nmatchAllforms, ref forward, ref wrap, ref format, ref replaceWithText, ref replace, ref matchKashida, ref matchDiactitics, ref matchAlefHamza, ref matchControl);
         }
         private void CreateWordDocument(object filename, object SaveAs)
         {
@@ -74,11 +64,7 @@ namespace usersApp.Windows
                 object readOnly = false;
                 object isVisible = false;
                 wordApp.Visible = false;
-                myWordDoc = wordApp.Documents.Open(ref filename, ref missing, ref readOnly,
-                                        ref missing, ref missing, ref missing,
-                                        ref missing, ref missing, ref missing,
-                                        ref missing, ref missing, ref missing,
-                                        ref missing, ref missing, ref missing, ref missing);
+                myWordDoc = wordApp.Documents.Open(ref filename, ref missing, ref readOnly, ref missing, ref missing, ref missing, ref missing, ref missing, ref missing, ref missing, ref missing, ref missing, ref missing, ref missing, ref missing, ref missing);
                 myWordDoc.Activate();
                 this.FindAndReplace(wordApp, "<movie>", FavouritePage.movies.FirstOrDefault().Name);
                 this.FindAndReplace(wordApp, "<dateOfSession>", FavouritePage.movies.FirstOrDefault().DayOfSession.ToString() + "." + FavouritePage.movies.FirstOrDefault().MonthOfSession.ToString() + "." + FavouritePage.movies.FirstOrDefault().YearOfSession.ToString());
@@ -90,12 +76,9 @@ namespace usersApp.Windows
                 {
                     string tmp = "";
                     foreach (Product product in FavouritePage.products)
-                    {
                         tmp += product.Name + " " + product.Price + "грн" + " " + product.Amount + "шт" + Environment.NewLine;
-                    }
                     this.FindAndReplace(wordApp, "<productsTitle>", "ТОВАРИ");
                     this.FindAndReplace(wordApp, "<products>", tmp);
-
                 }
                 else
                 {
@@ -121,11 +104,7 @@ namespace usersApp.Windows
                 new MesBox("Файл не знайдено", MessageType.Error, MessageButtons.Ok).ShowDialog();
                 return;
             }
-            myWordDoc.SaveAs2(ref SaveAs, ref missing, ref missing, ref missing,
-                            ref missing, ref missing, ref missing,
-                            ref missing, ref missing, ref missing,
-                            ref missing, ref missing, ref missing,
-                            ref missing, ref missing, ref missing);
+            myWordDoc.SaveAs2(ref SaveAs, ref missing, ref missing, ref missing, ref missing, ref missing, ref missing, ref missing, ref missing, ref missing, ref missing, ref missing, ref missing, ref missing, ref missing, ref missing);
             myWordDoc.Close();
             wordApp.Quit();
             new MesBox("Ваш квиток створено", MessageType.Success, MessageButtons.Ok).ShowDialog();
@@ -133,27 +112,19 @@ namespace usersApp.Windows
         private void checkBoxAcceptRules_Click(object sender, RoutedEventArgs e)
         {
             if (checkBoxAcceptRules.IsChecked == true)
-            {
                 buttonCompleteOrder.IsEnabled = true;
-            }
             else
-            {
                 buttonCompleteOrder.IsEnabled = false;
-            }
         }
         private void radioButtonCardPay_Checked(object sender, RoutedEventArgs e)
         {
             if(!checkBoxAcceptRules.IsEnabled)
-            {
                 checkBoxAcceptRules.IsEnabled = true;
-            }
         }
         private void radioButtonCashPay_Checked(object sender, RoutedEventArgs e)
         {
             if (!checkBoxAcceptRules.IsEnabled)
-            {
                 checkBoxAcceptRules.IsEnabled = true;
-            }
         }
         public static string BingPathToAppDir(string localPath)
         {
